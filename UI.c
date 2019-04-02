@@ -2,6 +2,20 @@
 
 #include<stdio.h>
 #include<stdlib.h>
+
+
+typedef struct pin{
+	char nama[3];
+	char simbol;
+	int net;
+}pin;
+
+pin pcb[40][40];
+int n, m;
+
+//ukuran pcb, di isi saaat create atau load;
+
+
 void menuawal(){	
 int menu;
 	
