@@ -1,14 +1,12 @@
-#ifndef MANUALLAYOUT_H
-#define MANUSLLSYOUT_H
-
-typedef struct pin{
-	char nama[3];
-	char simbol;
-	int net;
-
-}pin;
-
-void printlayout(pin pcb[n][m],int n,int m);
-void printRout(pin pcb[n][m],int n,int m);
+#ifndef ANJING_H
+#define ANJING_H
+typedef struct{
+        char nama[3];
+        int simbol;
+        int netlist;
+} pin;
+int n,m;
+void printlayout(pin pcb[][40] ,int n, int m);
+void printRout(pin pcb[][40],int n,int m);
 
 #endif
