@@ -219,9 +219,9 @@ void manual_routing(pin pcb[][40], int n_rows, int n_cols)
                         }while (!((input_user=='q')||(input_user=='Q')                          //Keluar jika user quit atau ganti node
                             ||(input_user=='n')||(input_user=='N')));
                     temp_int=strlen(simbol_terpakai);
-                    printf("panjang array simbol_terpakai = %d\n", temp_int);
+                    /*printf("panjang array simbol_terpakai = %d\n", temp_int);*/
                     simbol_terpakai[temp_int]=simbol_sementara;
-                    printf("karakter %c diisi pada array simbol_terpakai\n", simbol_terpakai[temp_int]);
+                    /*printf("karakter %c diisi pada array simbol_terpakai\n", simbol_terpakai[temp_int]);*/
                     netlist_terakhir = netlist_terakhir + 1;
                     } else {
                         printf("-simbol ini sudah dipakai sebelumnya pada jalur berbeda.\n");
@@ -673,7 +673,7 @@ void loadProject_layout(pin pcb[][40], char *st){
 				} 
 			}
 		}
-	printf("LAYOUT FILE LOAD SUCCESS\n");
+	//printf("LAYOUT FILE LOAD SUCCESS\n");
 	fclose(fp);}
 
 void loadProject_rout(pin pcb[][40] ,char *st ){
@@ -740,7 +740,7 @@ void loadProject_rout(pin pcb[][40] ,char *st ){
 			} 
 		}
 	}
-	printf("ROUTING FILE LOAD SUCCES \n");
+	//printf("ROUTING FILE LOAD SUCCES \n");
 	fclose(fp);
 }
 
@@ -794,7 +794,7 @@ void loadProject_net(pin pcb[][40], char *st){
 				break;
 			}
 			default :{
-				if (net=-49){
+				if (net == -49){
 					net = 0;
 				}
 				temp = net;
